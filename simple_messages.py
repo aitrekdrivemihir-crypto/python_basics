@@ -388,14 +388,14 @@ while message != 'quit':
     message = input(prompt)
     print(message)"""
 #49
-"""#flag
+#flag
 flag = True
 while flag:
     name = input('Enter your name: ')
     if name.lower() == 'mihir':
         flag = False
     else:
-        print("Enter correct name")"""
+        print("Enter correct name")
 
 
 
