@@ -398,8 +398,97 @@ while flag:
         print("Enter correct name")
     print("flag does not immediately exits the block")"""
 #50
+"""prompt = "\nEnter the city you want to visit "
+prompt += "\nPlease enter 'quit' to quit "
 while True:
-    city = input("")
+    city = input(prompt)
+    if city == 'quit':
+        break
+    else :
+        print(f"I would love to visit {city.title()}")
+    print("\nbreak immediately exits the block")"""
+#51
+"""#continue escapes only the current ongoing loop
+#This program is used to print odd numbers
+current_number = 1
+while current_number < 10:
+    if current_number % 2 == 0 :
+        current_number += 1 
+        continue
+    else :
+        print(current_number)
+        current_number += 1 """
+#52
+"""unconfirmed_users = []
+prompt = "\nEnter the names of new user :"
+prompt+= "\nEnter 'quit' for further verification "
+while True:
+    new_user = input(prompt) 
+    if new_user == 'quit':
+        break
+    else :
+      unconfirmed_users.append(new_user)
+confirmed_users = []
+while unconfirmed_users :
+    current_user = unconfirmed_users.pop()
+    print(f"\nVerifying user : {current_user.title()}")
+    confirmed_users.append(current_user)
+print("\nThe following users has been verified :")
+print(confirmed_users)"""
+#53
+"""#to delete multiple instances of same name in a list
+pets = ['dog','cat','dog','goldfish','cat','rabbit','cat']
+while 'cat' in pets:
+    pets.remove('cat')
+print(pets)"""
+#54
+"""#filling a dictionary with user input
+unconfirmed_users = []
+prompt = "\nEnter the names of new user :"
+prompt+= "\nEnter 'quit' for further verification "
+while True:
+    new_user = input(prompt) 
+
+    if new_user == 'quit':
+        break
+    else :
+      unconfirmed_users.append(new_user)
+
+confirmed_users = []
+
+for current_user in unconfirmed_users :
+
+    stats= {}
+
+    age = input(f"\nEnter {current_user.title()} age :")
+    dob = input(f"Enter {current_user.title()} dob :")
+    gender = input(f"Enter {current_user.title()} gender :")
+    email = input(f"Enter {current_user.title()} email :")
+
+    stats['name'] = current_user.title()
+    stats['age'] = age 
+    stats['date of birth'] = dob
+    stats['gender'] = gender
+    stats['email'] = email
+
+    confirmed_users.append(stats)
+
+print("\n The confirmed users :")
+
+for current_user in confirmed_users :
+    print("\n")
+    for key,value in current_user.items():
+        print(f"{key.title()} : {value.title()}")"""
+    
+    
+
+
+    
+
+
+
+
+
 
 
 
