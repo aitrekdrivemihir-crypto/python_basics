@@ -388,7 +388,7 @@ while message != 'quit':
     message = input(prompt)
     print(message)"""
 #49
-#flag
+"""#flag
 flag = True
 while flag:
     name = input('Enter your name: ')
@@ -396,6 +396,11 @@ while flag:
         flag = False
     else:
         print("Enter correct name")
+    print("flag does not immediately exits the block")"""
+#50
+while True:
+    city = input("")
+
 
 
 
