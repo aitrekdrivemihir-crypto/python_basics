@@ -621,6 +621,181 @@ for i in range(3):
     country_name = input("Enter the name of the country in which the city is :")
     describe_city(city_name,country_name)"""
 
+#59
+
+"""def get_formatted_name(first_name,last_name):
+    full_name = f"{first_name} {last_name}"
+    return full_name.title()
+name = get_formatted_name(first_name = 'mihir', last_name = 'soni')
+print(name)"""
+
+#60
+
+"""#Making a argument optional so we may or may not pass values
+def get_formatted_name(first_name,last_name,middle_name=''):
+    full_name = f"{first_name} {middle_name} {last_name}"
+    return full_name.title()
+name = get_formatted_name('mihir','soni')
+print(name)
+name = get_formatted_name('aditya',middle_name = 'kumar' ,last_name = 'soni')
+print(name)"""
+
+#61
+
+"""def build_person(first_name,last_name):
+    person = {'first':first_name , 'last':last_name}
+    return person
+person = build_person('mihir','soni')
+print(person)"""
+
+#62
+
+"""#optional argument in addition to dictionary
+def build_person(first_name,last_name,age=None,middle_name = ''):
+    person = {'first':first_name,'last':last_name}
+    if age:
+        person['age'] = age
+    if middle_name :
+        person['middle'] = middle_name
+    return person
+person_1 = build_person('mihir','soni',age = 18)
+person_2 = build_person('aditya',middle_name = 'kumar',last_name = 'soni' , age = 19)
+print(person_1)
+print(person_2)"""
+
+#63
+
+"""def get_formatted_name(first_name,last_name):
+    full_name = f"{first_name} {last_name}"
+    return full_name.title()
+while True:
+    print("\nTell me your name")
+    print("(enter 'q' at any time to quit)")
+
+    f_name = input("First name: ")
+    if f_name == 'q':
+        break
+
+    l_name = input("Last name: ")
+    if l_name == 'q':
+        break
+
+    formatted_name = get_formatted_name(f_name,l_name)
+    print(f"Hello {formatted_name.title()}")"""
+
+#64
+
+"""def greet_users(names):
+    for name in names :
+        msg = f"Hello, {name.title()}"
+        print(msg)
+
+usernames = ['Mihir','Adam','Eve']
+greet_users(usernames)"""
+
+#65
+
+"""unprinted_designs = []
+printed_designs =[]
+def designs_input():
+    prompt = "Enter designs: "
+    prompt += "\n(Enter 'q' if you have finished inputting):  "
+    print(prompt)
+    while True:
+        current_design = input()
+        if current_design == 'q':
+            break
+        else:
+            unprinted_designs.append(current_design)
+def designs_process():
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+        print(f"Printing model {current_design.title()}")
+        printed_designs.append(current_design)
+
+def designs_print():
+    print("\nThe following designs have been printed :")
+    for designs in printed_designs:
+        print(designs)
+
+designs_input()
+designs_process()
+designs_print()"""
+
+#66
+
+"""#Pass copy of list also known as slicing in case you don't want to change the original list
+def designs_process(unprinted_designs):
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+        print(f"Printed model {current_design.title()}")
+        printed_designs.append(current_design)
+def designs_print(printed_designs):
+    print("\nThe following designs have been printed :")
+    for designs in printed_designs:
+        print(designs)
+unprinted_designs = ['robot_chassis','robot_arms','robot_wheels','robot_legs']
+printed_designs = []
+designs_process(unprinted_designs[:])
+designs_print(printed_designs)
+print(f"\nOriginal List: {unprinted_designs}")"""
+
+#67
+
+"""#Passing an arbitrary number of arguments
+def make_pizza(*toppings):
+    print(toppings)
+make_pizza('pepproni')
+make_pizza('mushrooms','green peppers','extra cheese')"""
+
+#68
+
+"""def make_pizza(*toppings):
+    print("Making pizza with the following toppings: ")
+    for topping in toppings:
+        print(f"- {topping}")
+make_pizza('extra cheese')
+make_pizza('mushrooms','pepproni','green pepper','red pepper','extra cheese')"""
+
+#69
+
+"""#Always positional argument comes first then arbitrary argument
+def make_pizza(size,*toppings):
+    print(f"Making a {size}-inch pizza with the follwing toppings")
+    for topping in toppings:
+        print(f"- {topping}")
+make_pizza(16 ,'pepproni','extra cheese')
+make_pizza(12 ,'mushrooms','cheese burst', 'paneer')"""
+
+#70 
+
+"""#Passing arbitrary keyword arguments
+def build_profile(first,last,**user_info):
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    print(user_info)
+build_profile('Mihir','Soni',location = 'Arunachal' ,field ='Engineering')"""
+
+#71
+
+"""def make_pizza(size,*toppings):
+    print(f"Making a {size}-inch pizza with the following toppings: ")
+    for topping in toppings:
+        print(f"- {topping}")"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
