@@ -783,6 +783,275 @@ build_profile('Mihir','Soni',location = 'Arunachal' ,field ='Engineering')"""
     for topping in toppings:
         print(f"- {topping}")"""
 
+#72
+
+"""#A function that is a part of a class is called method
+#Creating and using a class
+class Dog:
+    def __init__(self,name,age):
+        self.name = name 
+        self.age = age
+    def sit(self):
+        print(f"{self.name} is now sitting ")
+    def roll(self):
+        print(f"{self.name} rolled over !")"""
+
+#73
+
+"""#Making an instance from a class
+class Dog:
+    def __init__(self,name,age):
+        self.name = name 
+        self.age = age
+    def sit(self):
+        print(f"{self.name} is now sitting ")
+    def roll(self):
+        print(f"{self.name} rolled over !")
+my_dog = Dog('William',6)
+print(f"My dog's name is {my_dog.name}")
+print(f"My dog is {my_dog.age} years old.")#Attribute age is accessed through instance of the class
+my_dog.sit()#methods and attributes are accessed through instance of the class
+my_dog.roll()"""
+
+#74 
+
+"""#Creating multiple instances of the class
+class Dog:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+    def sit(self):
+        print(f"{self.name} is now sitting ")
+    def roll(self):
+        print(f"{self.name} is now rolling over ")
+my_dog = Dog('William',6)
+your_dog = Dog('Lucy',5)
+my_dog.sit()
+your_dog.roll()"""
+
+#75 
+
+"""#A Practice question from the book Python Crash Course by Eric Matthes
+class Restaurant:
+    def __init__(self,restaurant_name,cuisine_type):
+        self.name = restaurant_name
+        self.type = cuisine_type
+    def describe_restaurant(self):
+        print(f"This is {self.name} ")
+        print(f"We make {self.type} here")
+    def open_restaurant(self):
+        print("The restaurant is open now ")
+restaurant = Restaurant('McDonald','Italian')
+print(restaurant.name)
+print(restaurant.type)
+restaurant.describe_restaurant()
+restaurant.open_restaurant()"""
+
+#76
+
+"""class Restaurant:
+    def __init__(self,restaurant_name,cuisine_type):
+        self.name = restaurant_name
+        self.type = cuisine_type
+    def describe_restaurant(self):
+        print(f"This is {self.name} ")
+        print(f"We make {self.type} here\n ")
+    def open_restaurant(self):
+        print("The restaurant is open now ")
+restaurant_1 = Restaurant('McDonald','Italian')
+restaurant_2 = Restaurant('KFC','Chinese')
+restaurant_3 = Restaurant('Burger Kings','American')
+restaurant_1.describe_restaurant()
+restaurant_2.describe_restaurant()
+restaurant_3.describe_restaurant()"""
+
+#77
+
+"""class User:
+    def __init__(self,first_name,last_name,email,phone_number):
+        self.fn = first_name
+        self.ln = last_name
+        self.email = email
+        self.phone = phone_number
+    def describe_user(self):
+        print(f"I am {self.fn} {self.ln}.\nMy email is {self.email}\nMy phone is {self.phone}")
+    def greet_user(self):
+        print(f"Hello {self.fn}")
+user_1 = User('Mihir','Soni','ai.trekdrivemihir@gmail.com','7858008181')
+user_1.greet_user()"""
+
+#78
+
+"""class Car:
+    def __init__(self,make,model,year):
+        self.make = make 
+        self.model = model
+        self.year = year
+    def get_descriptive_year(self):
+        long_name = f"{self.make} {self.model} {self.year}"
+        return long_name.title()
+my_new_car = Car('audi','a4',2024) 
+print(my_new_car.get_descriptive_year())"""
+
+#79
+
+"""#Value doesn't need always be passed  we can always set up some default values
+class Car:
+    def __init__(self,make,model,year):
+        self.make = make 
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    def get_descriptive_year(self):
+        long_name = f"{self.make} {self.model} {self.year}" 
+        return long_name.title()
+    def read_odometer(self):
+        print(f"This car has {self.odometer_reading} miles on it")
+my_new_car = Car('audi','a4',2024) 
+print(my_new_car.get_descriptive_year())
+my_new_car.read_odometer()"""
+
+#80
+
+"""#Modifying an attribute value directly by accessing it through instance/object
+class Car:
+    def __init__(self,make,model,year):
+        self.make = make 
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    def get_descriptive_year(self):
+        long_name = f"{self.make} {self.model} {self.year}" 
+        return long_name.title()
+    def read_odometer(self):
+        print(f"This car has {self.odometer_reading} miles on it")
+my_new_car = Car('audi','a4',2024) 
+print(my_new_car.get_descriptive_year())
+my_new_car.odometer_reading = 23
+my_new_car.read_odometer()"""
+
+#81
+
+"""#Modifyingan attribute value through a method
+class Car:
+    def __init__(self,make,model,year):
+        self.make = make 
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    def get_descriptive_year(self):
+        long_name = f"{self.make} {self.model} {self.year}" 
+        return long_name.title()
+    def read_odometer(self):
+        print(f"This car has {self.odometer_reading} miles on it")
+    def update_odometer(self,mileage):
+        self.odometer_reading = mileage
+    def increment_odometer(self,miles):
+        self.odometer_reading += miles
+my_new_car = Car('audi','a4',2024) 
+my_new_car.update_odometer(23_500)
+my_new_car.increment_odometer(100)
+print(my_new_car.get_descriptive_year())
+my_new_car.read_odometer()"""
+
+#82
+
+"""class Car:
+    def __init__(self,make,model,year):
+        self.make = make 
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    def get_descriptive_year(self):
+        long_name = f"{self.make} {self.model} {self.year}" 
+        return long_name.title()
+    def read_odometer(self):
+        print(f"This car has {self.odometer_reading} miles on it")
+    def update_odometer(self,mileage):
+        self.odometer_reading = mileage
+    def increment_odometer(self,miles):
+        self.odometer_reading += miles
+class ElectricCar(Car):
+    def __init__(self,make,model,year):
+        super().__init__(make,model,year) 
+my_leaf = ElectricCar('nissan','leaf',2024)
+print(my_leaf.get_descriptive_year())"""
+
+#83
+
+"""#Defining attributes and methods from a child class
+class Car:
+    def __init__(self,make,model,year):
+        self.make = make 
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    def get_descriptive_year(self):
+        long_name = f"{self.make} {self.model} {self.year}" 
+        return long_name.title()
+    def read_odometer(self):
+        print(f"This car has {self.odometer_reading} miles on it")
+    def update_odometer(self,mileage):
+        self.odometer_reading = mileage
+    def increment_odometer(self,miles):
+        self.odometer_reading += miles
+class ElectricCar(Car):
+    def __init__(self,make,model,year):
+        super().__init__(make,model,year)
+        #Initializing attributes specific to child class
+        self.battery_size = 40
+    def describe_battery(self):
+        print(f"The car has {self.battery_size}-kWh battery ")
+my_leaf = ElectricCar('Nissan','leaf',2024)
+print(my_leaf.get_descriptive_year())
+my_leaf.describe_battery()"""
+
+#84
+
+"""#Overriding methods from child class
+class Car:
+    def __init__(self,make,model,year):
+        self.make = make 
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+        self.current_fuel = 30
+        self.gas_tank_capacity =60
+    def get_descriptive_year(self):
+        long_name = f"{self.make} {self.model} {self.year}" 
+        return long_name.title()
+    def read_odometer(self):
+        print(f"This car has {self.odometer_reading} miles on it")
+    def update_odometer(self,mileage):
+        self.odometer_reading = mileage
+    def increment_odometer(self,miles):
+        self.odometer_reading += miles
+    def fill_gas_tank(self):
+        if self.current_fuel < self.gas_tank_capacity:
+            print("Filling tank ,Please wait !")
+            self.current_fuel = self.gas_tank_capacity
+        elif self.current_fuel == self.gas_tank_capacity:
+            print("Tank is full")
+        else:
+            print("Unrecognizable reading")
+class ElectricCar(Car):
+    def __init__(self,make,model,year):
+        super().__init__(make,model,year)
+        #Initializing attributes specific to child class
+        self.battery_size = 40
+    def describe_battery(self):
+        print(f"The car has {self.battery_size}-kWh battery ")
+    def fill_gas_tank(self):
+        print("Electric vehicles don't have gas tank ")
+my_leaf = ElectricCar('Nissan','leaf',2024)
+print(my_leaf.get_descriptive_year())
+my_leaf.describe_battery()"""
+
+
+
+
+
+
 
 
 
